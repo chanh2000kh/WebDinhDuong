@@ -1,0 +1,152 @@
+﻿@model WebDinhDuong.UserView
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+
+<div class="main">
+    <h1>PERSONAL</h1>
+    <div class="agileinfo_main">
+        <div id="err_edit">
+            <form id="testform" action="#" method="post" novalidate>
+
+                <fieldset style="border: 1px solid #999">
+                    <legend>Details :</legend>
+
+                    <p for="name" class="w3_field1">Name</p>
+                    <input id="name" class="frm_edit" name="Name" type="text" placeholder=@Model.name required data-error-msg="Enter your name" />
+
+                    <p for="email">Email address</p>
+                    <input id="email" class="frm_edit" name="email" type="email" placeholder=@Model.email required data-error-msg="Enter your valid email address" />
+
+                    <p for="password">Password</p>
+                    <input id="password" class="frm_edit" name="password" type="password" placeholder=@Model.password required data-error-msg="Enter your password" />
+
+                    <p for="gender" class="w3_field1">Gender</p>
+                    <input id="gender" class="frm_edit" name="gioitinh" type="text" placeholder=@Model.gender data-error-msg="Enter your name" />
+                    <select id="gennder" name="gioitinh" required>
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Other</option>
+                    </select>
+
+                    <p for="height">Height</p>
+                    <input id="height" class="frm_edit" name="height" type="number" placeholder=@Model.height required data-error-msg="Enter your height" />
+
+                    <p for="weight">Weight</p>
+                    <input id="weight" class="frm_edit" name="weight" type="number" placeholder=@Model.weight required data-error-msg="We need to know content weight" />
+
+
+                    <p for="frequencyactivity" class="w3_field1">Frequency Activity</p>
+                    <input id="frequencyactivity" class="frm_edit" name="frequencyactivity" type="text" placeholder=@Model.frequanecy data-error-msg="Enter your frequency Activity" />
+                    <select id="goal" name="goal" required>
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Slow</option>
+                    </select>
+
+                    <p for="goal" class="w3_field1">Goal</p>
+                    <input id="goal" name="goal" class="frm_edit" type="text" placeholder=@Model.goal data-error-msg="Enter your goal" />
+                    <select id="goal" name="goal" required>
+                        <option>Losing_weight</option>
+                        <option>Gaining_weight</option>
+                        <option>Put_on__weight</option>
+                    </select>
+
+
+                    <p for="goalweight">Goal's Weight</p>
+                    <input id="goalweight" class="frm_edit" name="goalweight" type="number" placeholder=@Model.gweight required data-error-msg="Enter your goal's weight" />
+
+
+                    <p for="time">Time</p>
+                    <input id="time" class="frm_edit" name="time" type="number" placeholder=@Model.time required data-error-msg="Enter your time" />
+
+                </fieldset>
+
+
+                <div id="collapsedSection" aria-hidden="true">
+                    <p for="hiddenInput">This field may or may not be visible</p>
+                    <input id="hiddenInput" name="hiddenInput" type="text" required data-error-msg="You wanted an extra question" />
+                </div>
+
+                <input type="submit" value="Save" formaction="/UserInformation/Edit">
+
+
+            </form>
+            </div>
+        </div>
+        <!-- Calendar -->
+        <link rel="stylesheet" href="~/Assets/User/css/jquery-ui.css" />
+        <script src="js/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("#datepicker").datepicker();
+            });
+        </script>
+        <!-- //Calendar -->
+        <script src="~/Assets/User/js/attrvalidate.jquery.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#testform').attrvalidate();
+                $('#resetBtn').click(function () { $('#testform').attrvalidate('reset'); });
+                $('#expandBtn').click(function () {
+                    var collapsible = $('#' + $(this).attr('aria-controls'));
+                    $(collapsible).attr('aria-hidden', ($(collapsible).attr('aria-hidden') === 'false'));
+                    $(this).attr('aria-expanded', ($(this).attr('aria-expanded') === 'false'));
+                });
+            });
+        </script>
+        <div class="agileits_copyright">
+            <p>© 2016 Product Delivery Form Widget. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+        </div>
+    </div>
+
+<script>
+    $(document).ready(function () {
+        $("#frm-login").submit(function (e) {
+            var form_data = {
+                Name: $("#name").val(),
+                Mail: $("#email").val(),
+                Password: $("#password").val(),
+                Gender: $("#gender").val(),
+                Height: $("#height").val(),
+                Weight: $("#weight").val(),
+                Frequency: $("#frequencyactivity").val(),
+                Goal: $("#goal").val(),
+                Goalweight: $("#goalweight").val(),
+                Time: $("#time").val(),       
+
+            };
+            $.ajax({
+                url: '/UserInformation/Edit',
+                type: 'POST',
+                async: true,
+                data: form_data,
+                success: function (msg_login) {
+                    ////alert(msg);
+                    if (msg_login == '0') {
+                        alert('Can not update. There is somethign problem!');
+                    }
+                   
+                    else {                       
+                        alert('Update successfully!');
+                        //$('#err_login1').html('<div class="alert alert-success"><strong>Đăng kí thành công</strong><span> Hệ thống tự chuyển sau vài giây ...</span></div>');
+                        setTimeout(
+                            //chuyển đến địa chỉ msg_login của controler gửi qua
+                            function () {
+                                window.location.href = '' + msg_login + '';
+                            }, 2000);
+                    }
+                }
+            });
+            return false;
+        });
+    })
+    //Load wating bar
+    $(document).ajaxStart(function () {
+        $("#waiting").show();
+    }).ajaxStop(function () {
+        $("#waiting").hide();
+    });
+</script>

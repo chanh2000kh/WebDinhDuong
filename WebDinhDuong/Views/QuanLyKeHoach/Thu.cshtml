@@ -1,0 +1,5 @@
+﻿@using WebDinhDuong.Models;
+@model IEnumerable<Thu>
+@foreach (var groupItem in Model)
+{
+<option value="@groupItem.Id">@groupItem.Name</option>}

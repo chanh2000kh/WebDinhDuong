@@ -1,0 +1,93 @@
+﻿@model WebDinhDuong.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+
+<div class="main">
+    <h1>PERSONAL</h1>
+    <div class="agileinfo_main">
+        <form id="testform" action="#" method="post" novalidate>
+
+            <fieldset style="border: 1px solid #999">
+                <legend>Details :</legend>
+
+                <p for="name" class="w3_field1">Name</p>
+                <input id="name" name="name" type="text" placeholder=@Model.Name required data-error-msg="Enter your name" />
+
+
+                <p for="emailAddress">Email address</p>
+                <input id="emailaddress" name="emailaddress" type="email" placeholder="" required data-error-msg="Enter your valid email address" />
+
+                <p for="password">Password</p>
+                <input id="password" name="password" type="password" placeholder="" required data-error-msg="Enter your password" />
+
+                <p for="gioitinh" class="w3_field1">Gender</p>
+                <input id="gioitinh" name="gioitinh" type="text" placeholder=@Model.GioiTinh required data-error-msg="Enter your name" />
+
+                <p for="height">Height</p>
+                <input id="height" name="height" type="number" placeholder=@Model.ChieuCao required data-error-msg="Enter your height" />
+
+                <p for="weight">Weight</p>
+                <input id="weight" name="weight" type="number" placeholder=@Model.CanNang required data-error-msg="We need to know content weight" />
+
+
+                <p for="frequencyactivity" class="w3_field1">Frequency Activity</p>
+                <input id="frequencyactivity" name="frequencyactivity" type="text" placeholder=@Model.TanSuatHoatDong required data-error-msg="Enter your frequency Activity" />
+
+
+                <p for="goal" class="w3_field1">Goal</p>
+                <input id="goal" name="goal" type="text" placeholder=@Model.MucTieu required data-error-msg="Enter your goal" />
+
+                <p for="goalweight">Goal's Weight</p>
+                <input id="goalweight" name="goalweight" type="number" placeholder=@Model.CanNangMongMuon required data-error-msg="Enter your goal's weight" />
+
+
+                <p for="time">Time</p>
+                <input id="time" name="time" type="number" placeholder=@Model.Thang required data-error-msg="Enter your time" />
+
+            </fieldset>
+
+
+
+            <div id="collapsedSection" aria-hidden="true">
+                <p for="hiddenInput">This field may or may not be visible</p>
+                <input id="hiddenInput" name="hiddenInput" type="text" required data-error-msg="You wanted an extra question" />
+              </div>
+          
+               <input type="submit" value="Edit" formaction="/UserInformation/Edit" />
+
+        
+        </form>
+       
+      
+          
+     
+    </div>
+    <!-- Calendar -->
+    <link rel="stylesheet" href="~/Assets/User/css/jquery-ui.css" />
+    <script src="js/jquery-ui.js"></script>
+    <script>
+						  $(function() {
+							$( "#datepicker" ).datepicker();
+						  });
+    <!--</script>-->
+    <!-- //Calendar -->
+    <!--<script src="~/Assets/User/js/attrvalidate.jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		  $(document).ready(function(){
+			$('#testform').attrvalidate();
+			$('#resetBtn').click(function(){ $('#testform').attrvalidate('reset'); });
+			$('#expandBtn').click(function(){
+			  var collapsible = $('#' + $(this).attr('aria-controls'));
+			  $(collapsible).attr('aria-hidden', ($(collapsible).attr('aria-hidden') === 'false'));
+			  $(this).attr('aria-expanded', ($(this).attr('aria-expanded') === 'false'));
+			});
+		  });
+    </script>-->
+    <div class="agileits_copyright">
+        <p>© 2016 Product Delivery Form Widget. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+    </div>
+</div>
+

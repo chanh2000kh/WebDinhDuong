@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b7409d9bdcc149838e59c5fdb0e8279f" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.Admin" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.Buoi" Width="1.5" PointX="8.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.DanhGiaNhanXet" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.KeHoach" Width="1.5" PointX="10.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.Login" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.MonAn" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.NguoiDung" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.sysdiagram" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.ThongTinDinhDuong" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.Thu" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDinhDuongModel.ThucDon" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK_Admin_Login" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__KeHoach__IdBuoi__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__KeHoach__IdBuoi__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK_DanhGiaNhanXet_NguoiDung1" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__KeHoach__IdThu__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__KeHoach__IdThu__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__KeHoach__IdThucD__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__KeHoach__IdThucD__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK_NguoiDung_Login" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__ThucDon__IdMonAn__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__ThucDon__IdMonAn__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__ThucDon__IdNguoi__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDinhDuongModel.FK__ThucDon__IdNguoi__36B12243" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

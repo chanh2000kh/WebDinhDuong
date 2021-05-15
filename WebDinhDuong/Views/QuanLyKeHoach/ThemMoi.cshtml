@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "ThemMoi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ThemMoi</h2>
+<div class="book-form">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h2 class="mb30">Personal Informations</h2>
+        </div>
+        @Html.ValidationSummary(true)
+        <form action="" method="post">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+
+                    <label class="control-label sr-only" for="Name"> Tên</label>
+                    <input name="Name" id="Name" type="text" placeholder="Name" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <label class="control-label sr-only" for="GhiChu"> Ghi Chú</label>
+                    <input name="GhiChu" id="GhiChu" type="text" placeholder="GhiChu" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <label class="control-label sr-only" for="Soluong"> Số lượng</label>
+                    <input name="Soluong" id="Soluong" type="text" placeholder="Soluong" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <label class="sr-only" for="datepicker">Ngày lên kế hoạch</label>
+                    <div class="input-group">
+                        <input id="datepicker" name="datepicker" type="text" placeholder="Date" class="form-control" required="">
+                        <span class="input-group-addon" id="basic-addon2"><i class="fa fa-calendar"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb20">
+                <div class="form-group">
+                    <label class="control-label sr-only required">Buổi</label>
+                    <select name="select" class="form-control">
+                        @Html.Action("Buoi", "QuanLyKeHoach")
+                        
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <label class="control-label sr-only required">Thứ</label>
+                    <select name="select2" class="form-control">
+                        @Html.Action("Thu", "QuanLyKeHoach")
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button type="submit" name="singlebutton" class="btn btn-primary"><a>Thêm</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+

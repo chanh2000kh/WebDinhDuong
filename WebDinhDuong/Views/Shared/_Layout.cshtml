@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Vegan Restaurant Responsive Website Templates</title>
+    <!-- Bootstrap -->
+    <link href="~/Assets/Food/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style CSS -->
+    <link href="~/Assets/Food/css/style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i%7cZilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="~/Assets/Food/css/owl.carousel.css" rel="stylesheet">
+    <link href="~/Assets/Food/css/owl.theme.default.css" rel="stylesheet">
+    <link href="~/Assets/Food/css/jquery-ui.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" type="text/css" href="~/Assets/Food/css/fontello.css">
+    <link href="~/Assets/Food/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- top-bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-5 hidden-xs">
+                    <div class="support-bar">
+                        <span class="support-icon"><i class="icon-circular-clock"></i></span>
+                        <p class="support-text">
+                            Mon to Fri : 11:00am - 10:00pm
+                            <br> Sat to Sun : 08:00am - 11:00pm
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-2 col-xs-12">
+                    <div class="logo"><a href="index.html"><img src="~/Assets/Food/images/logo.png" alt=""></a></div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5 hidden-xs">
+                    <div class="support-bar">
+                        <div class="support-icon"><i class="icon-at-email"></i></div>
+                        <p class="support-text">
+                            167 Science Center Drive, USA
+                            <br> +180-123-4567
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.top-bar -->
+    <!-- header-section-->
+    <div class="header-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <!-- navigations-->
+                    <div class="navigation">
+                        <div id="navigation">
+                            <ul>
+                                <li class="active"><a href="/Home/index">Home</a></li>
+
+                                <li class="has-sub">
+                                    <a href="blog-default.html">Blog</a>
+                                    <ul>
+                                        <li><a href="blog-default.html">Blog Default</a></li>
+                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                    </ul>
+
+                                </li>
+
+                                <li class="has-sub">
+                                    <a href="" class="dropdown-toggle"data-toggle="dropdown" >
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                       
+                                    </a>
+                                    <ul>
+                                        <li><a href="/Login/Login">Login</a></li>
+                                        <li><a href="/Register/Register">Resgister</a></li>
+                                        <li><a href="">Logout</a></li>
+                                        <li><a href="/UserInformation/Index">Information</a></li>
+                                    </ul>
+
+                                @*<li class="active"> @Html.ActionLink("Đăng nhập", "Login", "Login")</li>
+                                <li class="active">@Html.ActionLink("Đăng kí", "Register", "Register") </li>*@
+
+
+
+                                </li>                              
+                            </ul>
+
+                        </div>
+
+                        <div class="w3l_header_right">
+                           
+                        </div>
+                    </div>
+
+                   
+                    <!-- /.navigations-->
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Assets/Food/js/jquery.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/Assets/Food/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Assets/Food/js/menumaker.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Assets/Food/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="~/Assets/Food/js/sticky-header.js"></script>
+    <script type="text/javascript" src="~/Assets/Food/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/Assets/Food/js/multiple-carousel.js"></script>
+    <script type="text/javascript" src="~/Assets/Food/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="~/Assets/Food/js/date.js"></script>
+</body>
+</html>

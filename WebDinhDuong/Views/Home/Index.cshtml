@@ -1,0 +1,311 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- menu -->
+<div class="space-medium">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                
+                <div class="section-title">
+                    @using (Html.BeginForm("TimKiem","Home"))
+                    {
+                        <button type="submit" name="singlebutton" class="btn btn-primary">Tìm kiếm</button>
+                        <div style="width: 80%; float:right">
+
+                        <input name="searchString" type="text" placeholder=" Nhập tên món muốn tìm kiếm" class="form-control" required>
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            @Html.Action("MenuMon","Home")
+        </div>
+    </div>
+</div>
+<!-- /.menu -->
+
+<!-- testimonails -->
+<div class="space-medium bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1 col-lg-10 col-sm-12 col-xs-12">
+                <div class="section-title">
+                    <div class="testimonial-icon">
+                        <img src="~/Assets/Food/images/quote_icon.png" alt="">
+                    </div>
+                    <h2 class="testimonial-title">What Our Customers Say</h2>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="testimonials-carousel">
+            <div class="owl-carousel owl-two owl-theme">
+                <!-- testimonials -->
+                <div class="item">
+                    <!-- testimonials -->
+                    <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1 col-lg-10 col-sm-12 col-xs-12">
+                        <div class="testimonial-block">
+                            <div class="testimonial-content">
+
+                                <p class="testimonial-text">“Aenean aliquam gravida leet tempor sapieneses oesed setsagittis porthasus exeros mattisnon one augues necdu llaorper loremci variuse.”</p>
+                                <div class="testimonial-meta">
+                                    <p class="testimonial-user">Terry Byrdr</p>
+                                    <div class="star-rating">
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.testimonials -->
+                <!-- testimonials -->
+                <div class="item">
+                    <!-- testimonials -->
+                    <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1 col-lg-10 col-sm-12 col-xs-12">
+                        <div class="testimonial-block">
+                            <div class="testimonial-content">
+
+                                <p class="testimonial-text">“Integer in magna gravida dui aliquet pharetra. Quisque feugiat erat tortor, egeteget massa esulum ultricies miutmi cursus congue.”</p>
+                                <div class="testimonial-meta">
+                                    <p class="testimonial-user">Miam Luptin</p>
+                                    <div class="star-rating">
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.testimonials -->
+                <!-- testimonials -->
+                <div class="item">
+                    <!-- testimonials -->
+                    <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1 col-lg-10 col-sm-12 col-xs-12">
+                        <div class="testimonial-block">
+                            <div class="testimonial-content">
+
+                                <p class="testimonial-text">“Cras venenatis nulla ac diam varius, venenatis iaculis lorem ipsum doklro sit nibh consectetur. Pellentesturpis egestas.”</p>
+                                <div class="testimonial-meta">
+                                    <p class="testimonial-user">Olga Medley</p>
+                                    <div class="star-rating">
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.testimonials -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.testimonails -->
+<div class="space-medium">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-lg-4 col-sm-5 col-xs-12">
+                <div class="widget-schedule">
+                    <div class="schedule-content">
+                        <h3 class="schedule-title">Vegan Opening Hours</h3>
+                        <div class="schedule-icon">
+                            <i class="icon-cutlery-set-of-three-pieces"></i>
+                        </div>
+                        <div class="schedule-time">
+                            <h5 class="time-title">Monday - Friday</h5>
+                            <p>
+                                11:00 AM to 3:00 PM
+                                <br>7:00 PM to 10:00 PM
+                            </p>
+                        </div>
+                        <div class="schedule-time">
+                            <h5 class="time-title">Saturday - Sunday</h5>
+                            <p>
+                                11:00 AM to 3:00 PM
+                                <br>7:00 PM to 11:00 PM
+                            </p>
+                        </div>
+                        <div class="schedule-line"></div>
+                        <div class="schedule-call">+180-123-4567</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-lg-8 col-sm-7 col-xs-12">
+                <div class="book-form">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h2 class="mb30">Personal Informations</h2>
+
+                        </div>
+                        <form>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label sr-only" for="name"> Name</label>
+                                    <input id="name" type="text" placeholder="Name" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label sr-only" for="email"> Email</label>
+                                    <input id="email" type="text" placeholder="Email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label sr-only" for="phone"> Phone</label>
+                                    <input id="phone" type="text" placeholder="Phone" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="sr-only" for="datepicker">Date</label>
+                                    <div class="input-group">
+                                        <input id="datepicker" name="datepicker" type="text" placeholder="Date" class="form-control" required="">
+                                        <span class="input-group-addon" id="basic-addon2"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb20">
+                                <div class="form-group">
+                                    <label class="control-label sr-only required">Time</label>
+                                    <select name="select" class="form-control">
+                                        <option value="">Timing</option>
+                                        <option value="">08:00am to 03:00pm</option>
+                                        <option value="">07:00pm to 12:00pm</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label sr-only required">Number of People</label>
+                                    <select name="select" class="form-control">
+                                        <option value="">Number of People</option>
+                                        <option value="">2 Guests</option>
+                                        <option value="">6 Guests</option>
+                                        <option value="">8 Guests</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="submit" name="singlebutton" class="btn btn-primary">submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- about-us -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="footer-widget">
+                    <div class="ft-logo"><img src="~Assets/Food/images/ft-logo.png" alt=""></div>
+                </div>
+            </div>
+            <!-- /.about us -->
+            <!-- footer-hosting-services-links -->
+            <div class=" col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="footer-widget">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home </a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.footer-hosting-services-links -->
+            <!-- footer-useful links -->
+            <div class=" col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="footer-widget">
+                    <h3 class="footer-title">Menu</h3>
+                    <ul>
+                        <li><a href="#">breakfast</a></li>
+                        <li><a href="#">Lunch</a></li>
+                        <li><a href="#">Dinner</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.footer-useful links -->
+            <!-- footer-useful links -->
+            <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="footer-widget">
+                    <h3 class="footer-title">Contact Info </h3>
+                    <div class="contact-info">
+                        <span class="contact-icon"><i class="icon-placeholder"></i></span>
+                        <span class="contact-text">167 Science Center Drive, USA</span>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-icon"><i class="icon-telephone"></i></span>
+                        <span class="contact-text">+180-123-4567</span>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-icon"><i class="icon-letter"></i></span>
+                        <span class="contact-text">info@vegan.com</span>
+                    </div>
+                    <div class="ft-social">
+                        <span><a href="#" class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a></span>
+                        <span><a href="#" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a></span>
+                        <span><a href="#" class="btn-social btn-googleplus"><i class="fa fa-google-plus"></i></a></span>
+                        <span><a href="#" class=" btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a></span>
+                        <span><a href="#" class=" btn-social btn-pinterest"><i class="fa fa-pinterest-p"></i></a></span>
+                        <span><a href="#" class=" btn-social btn-instagram"><i class="fa fa-instagram"></i></a></span>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.footer-useful links -->
+        </div>
+    </div>
+    <!-- tiny-footer -->
+    <div class="container">
+        <div class="row">
+            <div class="tiny-footer">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p>
+                        Copyright © All Rights Reserved 2020 Template Design by
+                        <a href="https://easetemplate.com/" target="_blank" class="copyrightlink">EaseTemplate</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /. tiny-footer -->
+    </div>
+</div>
+<!-- /.footer -->

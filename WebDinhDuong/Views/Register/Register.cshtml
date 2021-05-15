@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout_Login_Register.cshtml";
+}
+<!--inner block start here-->
+<div class="signup-page-main">
+    <div class="signup-main">
+        <div class="signup-head">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="signup-block">
+            <div id="err_register">
+                @Html.ValidationSummary(true)
+                <form action="" method="post" id="frm-reg">
+                    <input type="text"class="frm-reg" name="name" placeholder="Name" required="" id="name">
+                    <input type="text"class="frm-reg" name="name" placeholder="Email" required="" id="email">
+                    <input type="password"class="frm-reg" name="password"  placeholder="Password" required="" id="passwd">
+                    <input type="password" class="frm-reg"name="password"  placeholder="Password" required="" id="confirmpass">
+                    <div class="forgot-top-grids">
+                        <div class="forgot-grid">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="brand1" value="">
+                                    <label for="brand1"><span></span>I agree to the terms</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="clearfix"> </div>
+                    </div>
+                    @*<input type="submit" name="Sign In" value="Sign up">*@
+                    <button class="btn btn-lg btn-primary btn-block" type="submit"> Register</button>
+                </form>
+            </div>
+            <div class="sign-down">
+                <h4>Already have an account? <a href="login.html"> Login here.</a></h4>
+                <h5><a href="/Home/Index">Go Back to Home</a></h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--DANG KY-->
+<script>
+    $(document).ready(function () {
+        $("#frm-reg").submit(function (e) {           
+                var form_data_login = {
+                    Name: $("#name").val(),
+                    Mail: $("#email").val(),                 
+                    Password: $("#passwd").val(),
+                    Confirmpassword: $("#confirmpass").val(),
+                };
+                $.ajax({
+                    url: '/Register/Register',
+                    type: 'POST',
+                    async: true,
+                    data: form_data_login,
+                    success: function (msg_login) {
+                        ////alert(msg);
+                        if (msg_login == '0') {
+                            alert('Account has been exist!');
+                        }
+                        else if (msg_login == '1') {
+                            alert('Password and ConfirmPassword are incorrect!');
+                        }
+                        else {
+                            $("#login_here").hide();
+                            $(".modal-footer").hide();
+
+                        alert('Register successfully!');
+                            //$('#err_login1').html('<div class="alert alert-success"><strong>Đăng kí thành công</strong><span> Hệ thống tự chuyển sau vài giây ...</span></div>');
+                            setTimeout(
+                                //chuyển đến địa chỉ msg_login của controler gửi qua
+                                function () {
+                                    window.location.href = '' + msg_login + '';
+                                }, 2000);
+                        }
+                    }
+                });
+                return false;            
+        });
+    })
+    //Load wating bar
+    $(document).ajaxStart(function () {
+        $("#waiting").show();
+    }).ajaxStop(function () {
+        $("#waiting").hide();
+    });
+</script>
+
